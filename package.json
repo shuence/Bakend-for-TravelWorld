@@ -21,6 +21,7 @@
     "jsonwebtoken": "^9.0.1",
     "mongodb": "^5.7.0",
     "mongoose": "^7.3.4",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "vercel": "^31.0.4"
   }
 }
