@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 mongoose.set("strictQuery", false);
 
-const connect = async () => {
+async function connect() {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
@@ -30,7 +30,7 @@ const connect = async () => {
   } catch (err) {
     console.log("MongoDB Database Connection Failed");
   }
-};
+}
 
 const corsOptions = {
   origin: true,
