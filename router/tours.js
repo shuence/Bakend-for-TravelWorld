@@ -19,6 +19,4 @@ tourRoute.get("/", getAllTour);
 
 tourRoute.get("/count", getTourCount);
 
-tourRoute.get("/search", getTourBySearch);
-
 export default tourRoute;

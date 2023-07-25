@@ -151,8 +151,6 @@ export const getFeaturedTour = async (req, res) => {
       res.status(500).json({ success: false, message: "Failed to search for tours" });
     }
   };
-
-
 export const getTourCount = async(req,res) =>{
   try{
     const tourCount = await Tour.estimatedDocumentCount();
@@ -163,7 +161,7 @@ export const getTourCount = async(req,res) =>{
     });
   }catch(err){
     console.error(err);
-    res.status(500).json({ success: false, message: "Failed to get tours" });
+    res.status(500).json({ success: false, message: "Failed to get tours count" });
   }
 }
   
