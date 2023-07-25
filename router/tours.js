@@ -1,5 +1,5 @@
 import express from "express";
-import { createTour, deleteTour, getAllTour, getFeaturedTour, getSingleTour, getTourBySearch, getTourCount, updateTour } from "../controllers/tourController.js";
+import { createTour, deleteTour, getAllTour, getFeaturedTour, getSingleTour, getTourCount, updateTour } from "../controllers/tourController.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
 const tourRoute = express.Router();

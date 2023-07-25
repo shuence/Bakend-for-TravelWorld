@@ -12,12 +12,15 @@ export const createBooking = async (req, res) => {
         data: savedBooking
     });
   } catch (error) {
+    console.error("Error while creating booking:", error);
     res.status(500).json({ 
         success: false, 
-        message: "Internal Server Error"
+        message: "Internal Server Error",
+        error: error.message // Send the error message to the client for debugging
     });
   }
 };
+
 
 // Get a single booking by ID
 export const getBooking = async (req, res) => {
