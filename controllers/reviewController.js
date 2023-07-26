@@ -67,6 +67,7 @@ export const getTourReviews = async (req, res) => {
 };
 
 // Delete a review
+// Delete a review
 export const deleteReview = async (req, res) => {
   const { reviewId } = req.params;
   const userId = req.userId; // Assuming the user ID is extracted from the authenticated token
@@ -85,8 +86,21 @@ export const deleteReview = async (req, res) => {
         .json({ message: "You are not authorized to delete this review" });
     }
 
-    // Delete the review
+    const tourId = review.tour;
+
     await Review.findByIdAndDelete(reviewId);
+
+    const tour = await Tour.findById(tourId);
+    if (!tour) {
+      return res.status(404).json({ message: "Tour not found" });
+    }
+
+    const updatedReviews = tour.reviews.filter(
+      (tourReview) => tourReview.toString() !== reviewId
+    );
+
+    tour.reviews = updatedReviews;
+    await tour.save();
 
     res.status(200).json({ message: "Review deleted successfully" });
   } catch (error) {
@@ -94,4 +108,3 @@ export const deleteReview = async (req, res) => {
     res.status(500).json({ message: "Failed to delete review" });
   }
 };
-
