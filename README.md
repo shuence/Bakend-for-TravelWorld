@@ -6,7 +6,7 @@ A Fullstack Tours & Travels Web App Using MERN Stack 💫
 
 ## Frontend Repository
 
-- [TravelWorld Backend Repository](https://github.com/shuence/Travel-World)
+- [TravelWorld Frontend Repository](https://github.com/shuence/Travel-World)
 
 ## Resources
 
