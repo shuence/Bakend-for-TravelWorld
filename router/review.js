@@ -15,6 +15,6 @@ reviewRoute.post('/:TourId' ,createReview);
 reviewRoute.get('/:TourId', getTourReviews);
 
 // Delete a review
-reviewRoute.delete('/:reviewId',verifyUser, deleteReview);
+reviewRoute.delete('/:reviewId', deleteReview);
 
 export default reviewRoute;

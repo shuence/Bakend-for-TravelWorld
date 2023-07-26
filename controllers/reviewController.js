@@ -67,10 +67,8 @@ export const getTourReviews = async (req, res) => {
 };
 
 // Delete a review
-// Delete a review
 export const deleteReview = async (req, res) => {
   const { reviewId } = req.params;
-  const userId = req.userId; // Assuming the user ID is extracted from the authenticated token
 
   try {
     // Check if the review exists
@@ -79,17 +77,9 @@ export const deleteReview = async (req, res) => {
       return res.status(404).json({ message: "Review not found" });
     }
 
-    // Check if the user is the owner of the review
-    if (review.user.toString() !== userId) {
-      return res
-        .status(403)
-        .json({ message: "You are not authorized to delete this review" });
-    }
-
-    const tourId = review.tour;
-
     await Review.findByIdAndDelete(reviewId);
 
+    const tourId = review.tour;
     const tour = await Tour.findById(tourId);
     if (!tour) {
       return res.status(404).json({ message: "Tour not found" });
