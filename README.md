@@ -3,6 +3,11 @@
 
 A Fullstack Tours & Travels Web App Using MERN Stack 💫
 
+
+## Frontend Repository
+
+- [TravelWorld Backend Repository](https://github.com/shuence/Travel-World)
+
 ## Resources
 
 - [Express Docs](https://expressjs.com/)
@@ -24,9 +29,6 @@ A Fullstack Tours & Travels Web App Using MERN Stack 💫
 
 ![image](https://github.com/shuence/FitClub/assets/65482186/4c863ee9-2e02-4e98-95c0-e122cf91320e)
 
-## Backend Repository
-
-- [TravelWorld Backend Repository](https://github.com/shuence/Bakend-for-TravelWorld)
 
 ## Setup
 
