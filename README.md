@@ -3,7 +3,6 @@
 
 A Fullstack Tours & Travels Web App Using MERN Stack 💫
 
-
 ## Frontend Repository
 
 - [TravelWorld Frontend Repository](https://github.com/shuence/Travel-World)
@@ -28,7 +27,6 @@ A Fullstack Tours & Travels Web App Using MERN Stack 💫
 [TravelWorld 🌍](https://travelworldtours.netlify.app/)
 
 ![image](https://github.com/shuence/FitClub/assets/65482186/4c863ee9-2e02-4e98-95c0-e122cf91320e)
-
 
 ## Setup
 
