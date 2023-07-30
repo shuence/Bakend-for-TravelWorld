@@ -10,6 +10,8 @@ import reviewRoute from "./router/review.js";
 import bookingRoute from "./router/bookings.js";
 import searchRoute from "./router/Search.js";
 import contactRoute from "./router/contact.js";
+import blogRoute from "./router/blog.js";
+import commentRoute from "./router/comment.js";
 
 dotenv.config();
 const app = express();
@@ -49,6 +51,8 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/review", reviewRoute);
 app.use("/api/v1/booking", bookingRoute);
 app.use("/api/v1/contact", contactRoute);
+app.use("/api/v1/blogs", blogRoute);
+app.use("/api/v1/comment", commentRoute);
 
 app.listen(port, () => {
   connect();

@@ -9,9 +9,9 @@ tourRoute.get("/featured", getFeaturedTour);
 
 tourRoute.get("/:id", getSingleTour);
 
-tourRoute.post("/", createTour);
+tourRoute.post("/",verifyAdmin, createTour);
 
-tourRoute.put("/:id", updateTour);
+tourRoute.put("/:id", verifyAdmin,updateTour);
 
 tourRoute.delete("/:id", deleteTour);
 
