@@ -4,7 +4,7 @@ import User from '../models/User.js';
 
 // Register a new user
 export const registerUser = async (req, res) => {
-  const { username, fullName, email, password, photo } = req.body;
+  const { username, fullName, phoneNumber, email, password, photo } = req.body;
 
   try {
     // Check if the email already exists
@@ -23,7 +23,7 @@ export const registerUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create a new user
-    const newUser = new User({ username, fullName, email, password: hashedPassword, photo });
+    const newUser = new User({ username, fullName, phoneNumber, email, password: hashedPassword, photo });
     await newUser.save();
 
     res.status(201).json({ message: 'User registered successfully' });
@@ -57,6 +57,8 @@ export const loginUser = async (req, res) => {
       id: user._id,
       username: user.username,
       email: user.email,
+      fullname: user.fullname,
+      phoneNumber: user.phoneNumber,
       createdAt: user.createdAt,
       updatedAt: user.updatedAt,
       token,
