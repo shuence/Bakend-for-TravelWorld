@@ -8,7 +8,7 @@ const bookingSchema = new mongoose.Schema(
     userEmail: {
       type: String
     },
-    recycleItem: {
+    tourName: {
         type: String,
         required:true,
     },
@@ -16,8 +16,8 @@ const bookingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    Address: {
-      type: String,
+    groupSize: {
+      type: Number,
       required: true,
     },
     phone: {
@@ -28,16 +28,7 @@ const bookingSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    bookStatus: {
-      type: String,
-      default: "pending",
-    },
-    bookStatusAt: {
-      type: Date,
-    },
-    bookStatusBy: {
-      type: String,
-    },
+    
   },
   { timestamps: true }
 );
